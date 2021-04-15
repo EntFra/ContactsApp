@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ContactosApp</string>
+    <string name="titulo">Contactos App</string>
+    <string name="misContactos">Mis contactos</string>
+    <string name="agregar">Agregar contacto</string>
+    <string name="nombre">Nombre</string>
+    <string name="telefono">Teléfono</string>
+    <string name="direccion">Dirección</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="guardar">Guardar</string>
+    <string name="volver">Volver</string>
 </resources>
