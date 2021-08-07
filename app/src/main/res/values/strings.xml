@@ -11,4 +11,11 @@
     <string name="cancelar">Cancelar</string>
     <string name="guardar">Guardar</string>
     <string name="volver">Volver</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="autor">Iván Prieto Rodríguez</string>
+    <string name="version">v1.0</string>
+    <string name="anio">2021</string>
+    <string name="anadir">Añadir</string>
+    <string name="buscar">Buscar</string>
+    <string name="ivalid_twitter_instagram">Por favor introduzca una cuenta con el formato correcto: \'@Ejemplo\'</string>
 </resources>

@@ -6,55 +6,63 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="40dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="40dp" />
 
     <TextView
-        android:id="@+id/agregar"
+        android:id="@+id/barraSuperior"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/rounded_corner_view"
+        android:layout_height="40dp"
+        android:background="#7ADDAF"
         android:gravity="center"
-        android:text="@string/agregar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/foto_rounded"
-        android:scaleType="centerCrop"
+        android:id="@+id/btnBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:onClick="borrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/editaImagenFicha"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/contact_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agregar"
-        tools:ignore="MissingConstraints"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/barraSuperior"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
 
     <TableLayout
         android:id="@+id/tablaDatosContacto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintStart_toStartOf="@id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton">
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline6"
+        app:layout_constraintStart_toStartOf="@id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/editaImagenFicha">
 
         <TableRow
-            android:id="@+id/filaMarca"
+            android:id="@+id/filaNombre"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
@@ -68,7 +76,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextModelo2"
+                android:id="@+id/editaNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -81,13 +89,13 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/filaModelo"
+            android:id="@+id/filaTelefono"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textViewModeloFicha"
+                android:id="@+id/textViewTelefono"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -95,7 +103,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextModelo"
+                android:id="@+id/editaTelefono"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -108,13 +116,13 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/filaKM"
+            android:id="@+id/filaDireccion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textViewKMFicha"
+                android:id="@+id/textViewDireccion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -122,26 +130,26 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextKilometraje"
+                android:id="@+id/editaDireccion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Dirección ej: C/ Laguna 5"
                 android:importantForAutofill="no"
-                android:inputType="numberDecimal"
+                android:inputType="phone"
                 android:textAlignment="textStart" />
 
         </TableRow>
 
         <TableRow
-            android:id="@+id/filaAnio"
+            android:id="@+id/filaTwitter"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textViewAnioFicha"
+                android:id="@+id/textViewTwitter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -149,25 +157,25 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextAnioFicha"
+                android:id="@+id/editaTwitter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Twitter ej: @MiTwitter"
                 android:importantForAutofill="no"
-                android:inputType="datetime"
+                android:inputType="text"
                 android:textAlignment="textStart" />
         </TableRow>
 
         <TableRow
-            android:id="@+id/filaCilindrada"
+            android:id="@+id/filaInstagram"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textViewCilindradaFicha"
+                android:id="@+id/textViewInstagram"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -175,44 +183,29 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextCilindradaFicha"
+                android:id="@+id/editaInstagram"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Instagram ej: @MiInstagram"
                 android:importantForAutofill="no"
-                android:inputType="number"
+                android:inputType="text"
                 android:textAlignment="textStart" />
+
         </TableRow>
 
     </TableLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:onClick="volver"
+        android:text="@string/volver"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/btnVolver"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="60dp"
-            android:text="@string/cancelar"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="488dp" />
-
-        <Button
-            android:id="@+id/btnCancelar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:text="@string/guardar"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="488dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablaDatosContacto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
